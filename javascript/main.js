@@ -30,13 +30,11 @@ let sendInfo = ( ) => {
     else {
         message.innerHTML = 'Por favor, complete el campo';
         message.style.visibility = "visible";
+        message.style.color = 'red';
+        document.querySelector( '.form__text--border' ).style.borderColor = 'red';
         input.classList.add( 'form__text--border' );
+        input.classList.remove( 'form__valid--check' );
     }
-
-    
-    // message.innerHTML = input.value;
-    
-    // input.classList.add( '.form__text--border' );
     input.value= '';
 }
 

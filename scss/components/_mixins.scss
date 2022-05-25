@@ -9,3 +9,9 @@
     width: $width;
     height: $height;
 }
+
+@mixin d-grid ( $column1, $column2, $row ) {
+    display: grid;
+    grid-template-columns:  $column1 $column2;
+    grid-template-rows: $row;
+}

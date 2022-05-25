@@ -11,12 +11,20 @@ let sendInfo = ( ) => {
     
     if( input.value !== '' ) {
         if( caracteres.test( input.value ) ) {
-            message.innerHTML = 'Correcto';
+            message.innerHTML = 'Su notificación se ha realizado con éxito';
+            message.style.visibility = "visible";
+            message.style.color = 'green';
+            input.classList.add( 'form__text--border' );
+            document.querySelector( '.form__text--border' ).style.borderColor = 'green';
+            input.classList.add( 'form__valid--check' );
+            input.classList.remove( 'form__valid--error' );
         }
         else {
-            message.innerHTML = 'Incorrecto';
+            message.innerHTML = 'No se puedo realizar la notificación';
             message.style.visibility = "visible";
             input.classList.add( 'form__text--border' );
+            input.classList.remove( 'form__valid--check' );
+            input.classList.add( 'form__valid--error' );
         }
     }
     else {

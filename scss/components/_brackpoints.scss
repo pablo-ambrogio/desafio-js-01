@@ -1,0 +1,11 @@
+// font-size: 20px;
+$breakpoints: (
+    'ms': 43.74em, // 699.98px
+    'md': 49.59em // 991.98px
+);
+
+@mixin breakpoint ( $size ) {
+    @media screen and (max-width: map-get( $breakpoints, $size ) ) {
+        @content;
+    }
+}

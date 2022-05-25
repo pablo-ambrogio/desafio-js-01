@@ -1,0 +1,23 @@
+
+/*
+### Body Copy
+
+- Font size: 20px
+
+### Fonts
+
+- Family: [Libre Franklin](https://fonts.google.com/specimen/Libre+Franklin)
+- Weights: 300, 600, 700
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+$font: 'Libre Franklin', sans-serif;
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: $font;
+}
